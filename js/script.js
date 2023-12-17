@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             contenedor.appendChild(peliculaElement);
             peliculaElement.addEventListener('click', function () {
                 const titulo = pelicula.titulo.replace(/\s/g, ''); // Eliminar espacios para usar en URL
-                window.location.href = `detallepelis.html?titulo=${titulo}`;
+                window.location.href = `../pages/detallepelis.html?titulo=${titulo}`;
 
             });
         });
