@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    background-color: #0f0826;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.imagenNav{
+    width: 40%;
+}
+
+nav img {
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    
+}
+
+@media screen and (min-width: 778px){
+  
+nav img{
+    width: 45%;
+}
+}
