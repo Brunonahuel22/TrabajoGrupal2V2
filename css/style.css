@@ -10,7 +10,7 @@
 }
 
 .imagenNav{
-    width: 10%;
+    width: 40%;
 }
 
 nav img {
@@ -22,12 +22,6 @@ nav {
     
 }
 
-@media all and (min-width:576px) and (max-width:769) {
-    .imagenNav{
-        width: 50%;
-    }
-  
-}
 body{
     min-height: 100vh;
     display: flex;
@@ -50,3 +44,9 @@ footer{
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+@media screen and (min-width: 778px){
+  
+    nav img{
+        width: 45%;
+    }
+    }
