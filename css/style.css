@@ -2,11 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
-body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+
 .navbar {
     background-color: #0f0826;
     font-family: 'Montserrat', sans-serif;
@@ -14,7 +10,7 @@ body{
 }
 
 .imagenNav{
-    width: 40%;
+    width: 10%;
 }
 
 nav img {
@@ -24,6 +20,21 @@ nav img {
 nav {
     position: fixed;
     
+}
+
+@media all and (min-width:576px) and (max-width:769) {
+    .imagenNav{
+        width: 50%;
+    }
+  
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1;
 }
 footer{
     background-color: #0f0826;
@@ -38,11 +49,4 @@ footer{
 .textoFooter{
     color: white;
     font-family: 'Montserrat', sans-serif;
-}
-
-@media screen and (min-width: 778px){
-  
-nav img{
-    width: 45%;
-}
 }
