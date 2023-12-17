@@ -28,7 +28,7 @@
     <link rel="icon" href="../img/Claqueta.ico" />
   </head>
 
-  <body>
+  <body id="admin">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark d-flex">
         <div class="container-fluid">
@@ -75,8 +75,166 @@
         </div>
       </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <h4 class="text-center py-3 text-light">Pagina Administrador</h4>
+        <div class="text-end container">
+          <!-- Boton para modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#modal"
+          >
+            Agregar <i class="bi bi-plus-circle-dotted"></i>
+          </button>
+  
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="modal"
+            tabindex="-1"
+            aria-labelledby="modalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modalLabel">
+                    Ingrese los Datos de una Pelicula
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!--Formulario-->
+                  <form class="text-start">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label"
+                        >Nombre Pelicula
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombre"
+                        minlength="5"
+                        maxlength="15"
+                        required
+                      />
+                    </div>
+  
+                    <!--checkbox-->
+                    <div class="mb-3">
+                      <label for="categoria" class="form-label"
+                        >Categoria
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="categoria"
+                        placeholder="Terror,Aventura,Drama"
+                        minlength="5"
+                        maxlength="15"
+                        required
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="subidoPagina" class="form-label"
+                        >Esta Subido a la pagina? (Si o No)
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="subidoPagina"
+                        maxlength="2"
+                        minlength="2"
+                        required
+                      />
+                    </div>
+                    
+                   
+  
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control "
+                        required
+                        minlength="10"
+                        maxlength="50"
+                       
+                        id="descripcion"
+                      ></textarea>
+                      <label for="descripcion">Descripcion</label>
+                    </div>
+  
+                    <div class="my-2 text-end">
+                      <button type="submit" class="btn btn-primary">
+                        Agregar
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <section class="container">
+          <div class="table-responsive">
+            <table class="table table-striped mt-4 text-center">
+              <thead>
+                <tr>
+                  <th scope="col">Codigo</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Categoria</th>
+                  <th scope="col">Descripcion</th>
+                  <th scope="col">Publicado</th>
+                  <th scope="col">Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">313123</th>
+                  <td>Napoleón</td>
+                  <td>Drama Historia Guerra</td>
+                  <td>
+                    <p>
+                      Una mirada personal a los orígenes del líder militar francés
+                      y su rápido y despiadado ascenso a emperador.
+                    </p>
+                  </td>
+                  <td>
+                    <i
+                      <i
+                      class="bi bi-file-earmark-excel-fill fs-4 text-danger"
+                    ></i>
+                  </td>
+                  <td >
+                    <button type="button" title="Editar" class="btn lapiz fs-4">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button
+                      type="submit"
+                      title="Destacar"
+                      class="btn estrella fs-4"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                    </button>
+                    <button type="button" title="Eliminar" class="btn tacho fs-4">
+                      <i class="bi bi-trash-fill"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+    
 
     <footer>
       <div class="container">
