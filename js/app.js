@@ -1,7 +1,7 @@
 import { Pelicula } from "./classPelicula.js";
 
 const formulario = document.querySelector("form");
-console.log(formulario);
+
 
 //datos formulario
 let nombre = document.getElementById("nombre");
@@ -21,10 +21,8 @@ function crearContacto(e) {
   e.preventDefault();
   const pelicula = new Pelicula(nombre.value,categoria.value,publicado.value,descripcion.value);
   peliculas.push(pelicula);
-  console.log(nombre.value);
-  console.log(categoria.value);
-  
   guardarLocalStore();
+  
 
   
   //agregar texto a tabla
@@ -91,7 +89,8 @@ function crearContacto(e) {
 
   const contenedorPadre = document.querySelector("tbody");
   contenedorPadre.appendChild(nuevaCelda);
-  
+
+  limpiarFormulario();
 }
 
 formulario.addEventListener("submit", crearContacto);
