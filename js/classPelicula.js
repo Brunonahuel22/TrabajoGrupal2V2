@@ -1,19 +1,19 @@
 export class Pelicula{
-    #codigo
+    #id
     #nombre
     #categoria
     #descripcion
     #publicado
     constructor (nombre,categoria,descripcion,publicado){
-        this.#codigo = crypto.randomUUID();
+        this.#id = crypto.randomUUID();
         this.#nombre = nombre;
         this.#categoria = categoria;
         this.#descripcion = descripcion;
         this.#publicado = publicado;
     }
 
-    get codigo(){
-        return this.#codigo;
+    get id(){
+        return this.#id;
     }
     get nombre(){
         return this.#nombre;
@@ -26,9 +26,6 @@ export class Pelicula{
     }
     get publicado(){
         return this.#publicado;
-    }
-    set codigo(nuevoCodigo){
-         this.#codigo = nuevoCodigo;
     }
     set nombre(nuevonombre){
         this.#nombre = nuevonombre;
@@ -47,6 +44,7 @@ export class Pelicula{
         return{
             nombre: this.nombre,
             categoria: this.categoria,
+            id: this.id,
             descripcion: this.descripcion,
             publicado: this.publicado,
         };
