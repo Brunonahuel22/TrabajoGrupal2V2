@@ -18,7 +18,9 @@ nav img {
 }
 
 nav {
-    position: fixed;
+    position: sticky;
+    width: 100%;
+    z-index: 1;
     
 }
 
