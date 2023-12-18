@@ -8,11 +8,6 @@
     font-family: 'Montserrat', sans-serif;
     
 }
-@media screen and (min-width: 778px) {
-    nav img {
-        width: 45%;
-    }
-}
 
 /* principal*/
 aside{
@@ -94,13 +89,16 @@ img{
 @media( max-width: 1080px){
 
 }
-@media( max-width: 991px){
+@media (max-width: 991px){
     .catalogo--peliculas {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    .imagenNav{
+        width: 10%;
+        margin-top: 20px;
+    }
     .peliculas {
         display: flex;
         flex-wrap:nowrap;
@@ -118,12 +116,12 @@ img{
 /* ... */
 
 @media (max-width: 774px) {
+
     .catalogo--peliculas {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .peliculas {
         display: flex;
         flex-wrap: wrap;
@@ -135,15 +133,14 @@ img{
         height: auto;
         margin-bottom: 10px; /* Espaciado entre imágenes */
     }
+    
 }
 
 .imagenNav{
-    width: 40%;
+    width: 15%;
+    margin-top: 20px;
 }
 
-nav img {
-    width: 100%;
-}
 
 nav {
     position: sticky;
@@ -159,6 +156,8 @@ body{
 }
 main {
     flex-grow: 1;
+    margin-top: 88px;
+
 }
 footer{
     background-color: #0f0826;
@@ -173,4 +172,12 @@ footer{
 .textoFooter{
     color: white;
     font-family: 'Montserrat', sans-serif;
+}
+@media (max-width: 576px) {
+    .imagenNav{
+        width: 50%;
+    }
+    main{
+        margin-top: 70;
+    }
 }
