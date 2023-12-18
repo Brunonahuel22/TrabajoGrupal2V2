@@ -38,29 +38,46 @@ const dibujarCelda = (detalles, numeroCelda) => {
     </td>
     <td>${icono}</td>
     <td>
-    <button type="button" class="btn lapiz fs-4 text-info" data-bs-toggle="modal" data-bs-target="#editarModal">
-  <i class="bi bi-pencil-square"></i>
-</button>
+      <button type="button" title="Editar" class="btn lapiz fs-4 text-info" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+        <i class="bi bi-pencil-square"></i>
+      </button>
 <!-- Modal de edición -->
-<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Película</h5>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <!-- Formulario de edición -->
-        <form id="formularioEdicion">
-          <!-- Campos de edición -->
-          <div class="mb-3">
-          <label for="nombre" class="form-label"
+        <!-- -------------------------------Formulario------------------------------- -->
+
+        <form class="text-start form2">
+        <div class="mb-3">
+          <label for="nombremod2" class="form-label"
             >Nombre Pelicula
           </label>
           <input
             type="text"
             class="form-control"
-            id="nombrepeli"
+            id="nombremod2"
+            minlength="5"
+            maxlength="15"
+            required
+          />
+        </div>
+
+     
+        <div class="mb-3">
+          <label for="categoriamod2" class="form-label"
+            >Categoria
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="categoriamod2"
+            placeholder="Terror,Aventura,Drama"
             minlength="5"
             maxlength="15"
             required
@@ -68,54 +85,42 @@ const dibujarCelda = (detalles, numeroCelda) => {
         </div>
 
         <div class="mb-3">
-        <label for="categoria" class="form-label"
-          >Categoria
-        </label>
-        <input
-          type="text"
-          class="form-control"
-          id="categoriapeli"
-          placeholder="Terror,Aventura,Drama"
-          minlength="5"
-          maxlength="15"
-          required
-        />
-      </div>
-
-          
-      <div class="mb-3">
-      <label for="subidoPagina" class="form-label"
-        >Esta Subido a la pagina? (Si o No)
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        id="subidoPaginapeli"
-        maxlength="2"
-        minlength="2"
-        required
-      />
-    </div>
+          <label for="subidoPaginamod2" class="form-label"
+            >Esta Subido a la pagina? (Si o No)
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="subidoPaginamod2"
+            maxlength="2"
+            minlength="2"
+            required
+          />
+        </div>
         
-    
-    <div class="form-floating">
-    <textarea
-      class="form-control "
-      required
-      minlength="10"
-      maxlength="50"
-     
-      id="descripcionpeli"
-    ></textarea>
-    <label for="descripcion">Descripcion</label>
-  </div>
+       
 
-        
+        <div class="form-floating">
+          <textarea
+            class="form-control "
+            required
+            minlength="10"
+            maxlength="50"
+           
+            id="descripcionmod2"
+          ></textarea>
+          <label for="descripcionmod2">Descripcion</label>
+        </div>
 
-          <button type="submit" class="btn btn-primary mt-3 mod2" onclick="crearContacto('${detalles.id}')">Guardar cambios</button>
-
-        </form>
+        <div class="my-2 text-end">
+          <button type="button" class="btn btn-primary" onclick="editar('${detalles.id}')">
+            Agregar
+          </button>
+        </div>
+      </form>
+        <!----------------------------------------->
       </div>
+      
     </div>
   </div>
 </div>
@@ -131,13 +136,15 @@ const dibujarCelda = (detalles, numeroCelda) => {
 };
 
 
-window.crearContacto = (id) =>{
-  const peliculaEditar = peliculas.findIndex((detallespeli) => detallespeli.id === id);
-  alert(peliculaEditar)
-
+function limpiar() {
+  const formularioModal = document.querySelector('#exampleModal form.text-start');
+  formularioModal.reset();
 }
 
-
+window.editar = (id) => {
+ console.log('desde funcion');
+ limpiar();
+};
 
 window.borrar = (id) => {
   // Encontrar la posición de la película con el ID dado
@@ -183,6 +190,5 @@ function crearContacto(e) {
 formulario.addEventListener("submit", crearContacto);
 
 cargaInicial();
-
 
 
