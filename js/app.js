@@ -60,7 +60,7 @@ const dibujarCelda = (detalles, numeroCelda) => {
           <input
             type="text"
             class="form-control"
-            id="nombre"
+            id="nombrepeli"
             minlength="5"
             maxlength="15"
             required
@@ -74,7 +74,7 @@ const dibujarCelda = (detalles, numeroCelda) => {
         <input
           type="text"
           class="form-control"
-          id="categoria"
+          id="categoriapeli"
           placeholder="Terror,Aventura,Drama"
           minlength="5"
           maxlength="15"
@@ -90,7 +90,7 @@ const dibujarCelda = (detalles, numeroCelda) => {
       <input
         type="text"
         class="form-control"
-        id="subidoPagina"
+        id="subidoPaginapeli"
         maxlength="2"
         minlength="2"
         required
@@ -105,14 +105,14 @@ const dibujarCelda = (detalles, numeroCelda) => {
       minlength="10"
       maxlength="50"
      
-      id="descripcion"
+      id="descripcionpeli"
     ></textarea>
     <label for="descripcion">Descripcion</label>
   </div>
 
         
 
-  <button type="submit" class="btn btn-primary mt-3" onclick="crearContacto()">Guardar cambios</button>
+          <button type="submit" class="btn btn-primary mt-3 mod2" onclick="crearContacto('${detalles.id}')">Guardar cambios</button>
 
         </form>
       </div>
@@ -129,8 +129,17 @@ const dibujarCelda = (detalles, numeroCelda) => {
     </td>
   </tr>`;
 };
+
+
+window.crearContacto = (id) =>{
+  const peliculaEditar = peliculas.findIndex((detallespeli) => detallespeli.id === id);
+  alert(peliculaEditar)
+
+}
+
+
+
 window.borrar = (id) => {
-  console.log("id:", id);
   // Encontrar la posición de la película con el ID dado
   const posicionpelibuscada = peliculas.findIndex(
     (itemContacto) => itemContacto.id === id
@@ -172,4 +181,8 @@ function crearContacto(e) {
 }
 
 formulario.addEventListener("submit", crearContacto);
+
+cargaInicial();
+
+
 
