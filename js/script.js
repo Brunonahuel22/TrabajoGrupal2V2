@@ -64,3 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
     mostrarPeliculas(peliculas.masVistas, 'masVistas');
     // Agrega más secciones aquí según sea necesario
 });
+
+
+    
