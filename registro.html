@@ -24,6 +24,7 @@
     />
     <!--Link css-->
     <link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="./css/registro.css" />
     <title>MovieCode</title>
     <link rel="icon" href="./img/Claqueta.ico" />
   </head>
@@ -75,41 +76,41 @@
 <body>
 	<main>
 		<form action="" class="formulario" id="formulario">
-			<!-- Grupo: Usuario -->
+			<!-- Usuario -->
 			<div class="formulario__grupo" id="grupo__usuario">
 				<label for="usuario" class="formulario__label">Usuario</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+					<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="jose_123" maxlength="15">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 15 dígitos y solo puede contener numeros, letras y guion bajo.</p>
 			</div>
 
-			<!-- Grupo: Nombre -->
+			<!-- Nombre -->
 			<div class="formulario__grupo" id="grupo__nombre">
-				<label for="nombre" class="formulario__label">Nombre</label>
+				<label for="nombre" class="formulario__label">Nombre/s</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="jose maria" maxlength="30">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+				<p class="formulario__input-error">El nombre  tiene que ser de 3 a 30 dígitos y no puede contener numeros, letras y guion bajo.</p>
 			</div>
 
-			<!-- Grupo: Contraseña -->
+			<!-- Contraseña -->
 			<div class="formulario__grupo" id="grupo__password">
 				<label for="password" class="formulario__label">Contraseña</label>
 				<div class="formulario__grupo-input">
-					<input type="password" class="formulario__input" name="password" id="password">
+					<input type="password" class="formulario__input" name="password" id="password" placeholder="123Abc" maxlength="16">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+				<p class="formulario__input-error">La contraseña minimo 4 y maximo 12 dígitos.</p>
 			</div>
 
-			<!-- Grupo: Contraseña 2 -->
+			<!-- repetir Contraseña  -->
 			<div class="formulario__grupo" id="grupo__password2">
 				<label for="password2" class="formulario__label">Repetir Contraseña</label>
 				<div class="formulario__grupo-input">
-					<input type="password" class="formulario__input" name="password2" id="password2">
+					<input type="password" class="formulario__input" name="password2" id="password2" maxlength="16">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
@@ -119,23 +120,23 @@
 			<div class="formulario__grupo" id="grupo__correo">
 				<label for="correo" class="formulario__label">Correo Electrónico</label>
 				<div class="formulario__grupo-input">
-					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com" maxlength="50">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+				<p class="formulario__input-error">El correo debe estar activo.</p>
 			</div>
 
-			<!-- Grupo: Teléfono -->
+			<!-- Teléfono -->
 			<div class="formulario__grupo" id="grupo__telefono">
 				<label for="telefono" class="formulario__label">Teléfono</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+					<input type="number" class="formulario__input" name="telefono" id="telefono" placeholder="3817810755" maxlength="14">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+				<p class="formulario__input-error">solo puede contener numeros y el maximo son 14 dígitos.</p>
 			</div>
 
-			<!-- Grupo: Terminos y Condiciones -->
+			<!-- Terminos y Condiciones -->
 			<div class="formulario__grupo" id="grupo__terminos">
 				<label class="formulario__label">
 					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
@@ -144,17 +145,34 @@
 			</div>
 
 			<div class="formulario__mensaje" id="formulario__mensaje">
-				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellena el formulario correctamente. </p>
 			</div>
 
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
 				<button type="submit" class="formulario__btn">Enviar</button>
-				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Registro enviado exitosamente!</p>
 			</div>
 		</form>
-	</main>
+	</main> 
+	<footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="mt-3 textoFooter">
+                <i class="bi bi-facebook me-2"></i>
+                <i class="bi bi-twitter-x me-2"></i>
+                <i class="bi bi-instagram"></i>
+              </h4>
+              <a href="#" class="textoFooter">Contactate con Nosotros</a>
+              <p class="textoFooter mt-1">
+                &copy; 2023 MovieCode. Todos los derechos reservados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-	<script src="js/formulario.js"></script>
+	<script src="./js/registro.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
