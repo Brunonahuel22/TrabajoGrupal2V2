@@ -174,10 +174,16 @@ footer{
     font-family: 'Montserrat', sans-serif;
 }
 @media (max-width: 576px) {
-    .imagenNav{
+    .imagenNav {
         width: 50%;
     }
-    main{
-        margin-top: 70;
+    main {
+        margin-top: 70px; 
+}
+
+@media screen and (min-width: 778px) {
+    nav img {
+        width: 45%;
     }
 }
+
