@@ -1,0 +1,51 @@
+
+
+.card{
+   
+    width: 70%;
+    filter: brightness(90%);
+    box-shadow: 5px 5px 5px 5px rgb(223, 218, 218);
+    
+}
+
+
+.card:hover{
+    filter: brightness(35%);
+    transition: 450ms;
+}
+
+main{
+    font-family: 'Roboto', sans-serif;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0, 0.3) ), url(../img/nosotros.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    
+} 
+    span{
+        color: rgb(215, 218, 218);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    strong{
+        color:rgb(215, 218, 218);
+    }
+
+
+.card-img-top1{
+    height: 180px;
+}
+.card-img-top2{
+    height: 180px;
+}
+
+.card-img-top3{
+    height: 180px;
+}
+.card-img-top4{
+    height: 180px;
+}
+.card-img-top5{
+    height: 180px;
+}
+
+  
+ 
