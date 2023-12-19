@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Almacenar datos de películas en Local Storage (una sola vez)
     const peliculas = {
         populares: [
-            { titulo: 'Avatar', año: 2021, genero: 'Aventura', imagen: 'img/POPULARES/AVATAR.jpg' },
+            { titulo: 'Avatar', año: 2021, genero: 'Aventura', imagen: 'img/POPULARES/AVATAR.jpg', },
             { titulo: 'Batman', año: 2008, genero: 'Accion', imagen: 'img/POPULARES/el caballero de la noche bbatman.jpg' },
             { titulo: 'Elvis', año: 2022, genero: 'Drama', imagen: 'img/POPULARES/elvis.jpg' },
             { titulo: 'El gato con botas', año: 2022, genero: 'Comedia', imagen: 'img/POPULARES/gato con botas.jpg' },
@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
             contenedor.appendChild(peliculaElement);
             peliculaElement.addEventListener('click', function () {
                 const titulo = pelicula.titulo.replace(/\s/g, ''); // Eliminar espacios para usar en URL
-                window.location.href = `../pages/detallepelis.html?titulo=${titulo}`;
-
+                localStorage.setItem('actualPelicula', JSON.stringify(pelicula));
+                window.location.href = `../pages/detallepelis.html`;
             });
         });
     }
@@ -65,5 +65,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // Agrega más secciones aquí según sea necesario
 });
 
-
-    
+   
+   
