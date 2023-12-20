@@ -217,6 +217,8 @@ window.destacar = (id) => {
   const peliculaEditar = arregloPeliculas.find(
     (pelicula) => pelicula.id === id
   );
+    console.log('entra a funcion')
+ 
 };
 
 const validarformulario = (texto, min, max) => {
