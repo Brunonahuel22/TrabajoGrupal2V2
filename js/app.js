@@ -13,17 +13,22 @@ const arregloPeliculas = JSON.parse(localStorage.getItem("pelisKey")) || [];
 //funciones
 function crearContacto(e) {
   e.preventDefault();
-  const pelicula = new Pelicula(
-    nombre.value,
-    categoria.value,
-    descripcion.value,
-    publicado.value
-  );
-  arregloPeliculas.push(pelicula);
+   
+   if ((validarformulario(nombre.value ,5,10) && (validarformulario(descripcion.value ,10,50))) &&( validarformulario(categoria.value,5,10) && validarformulario(publicado.value,2,2)) ) {
+    const pelicula = new Pelicula(
+      nombre.value,
+      categoria.value,
+      descripcion.value,
+      publicado.value
+    );
+    arregloPeliculas.push(pelicula);
 
-  limpiarFormulario();
-  guardarLocalStore();
-  dibujarCelda(pelicula, arregloPeliculas.length);
+    limpiarFormulario();
+    guardarLocalStore();
+    dibujarCelda(pelicula, arregloPeliculas.length);
+   } else {
+    alert('No Cumple con los requisitos');
+   }
 }
 
 function limpiarFormulario() {
@@ -40,9 +45,11 @@ const dibujarCelda = (Objeto, numeroCelda) => {
   let iconoBootstrap;
 
   if (Objeto.publicado === "si" || Objeto.publicado === "Si") {
-    iconoBootstrap = '<i class="bi bi-file-earmark-check-fill fs-4 text-success"></i>';
+    iconoBootstrap =
+      '<i class="bi bi-file-earmark-check-fill fs-4 text-success"></i>';
   } else {
-    iconoBootstrap = '<i class="bi bi-file-earmark-excel-fill fs-4 text-danger"></i>';
+    iconoBootstrap =
+      '<i class="bi bi-file-earmark-excel-fill fs-4 text-danger"></i>';
   }
 
   contenedorPadre.innerHTML += `<tr>
@@ -181,33 +188,41 @@ formulario.addEventListener("submit", crearContacto);
 
 cargaInicial();
 
-
 // Boton Editar
-window.editar = (id) =>{
-  const peliculaEditar = arregloPeliculas.find((pelicula) => pelicula.id === id);
-    // Llenar el formulario modal con la información actual
-    document.getElementById("nombremod2").value = peliculaEditar.nombre;
-    document.getElementById("categoriamod2").value = peliculaEditar.categoria;
-    document.getElementById("subidoPaginamod2").value = peliculaEditar.publicado;
-    document.getElementById("descripcionmod2").value = peliculaEditar.descripcion;
-
-}
+window.editar = (id) => {
+  const peliculaEditar = arregloPeliculas.find(
+    (pelicula) => pelicula.id === id
+  );
+  // Llenar el formulario modal con la información actual
+  document.getElementById("nombremod2").value = peliculaEditar.nombre;
+  document.getElementById("categoriamod2").value = peliculaEditar.categoria;
+  document.getElementById("subidoPaginamod2").value = peliculaEditar.publicado;
+  document.getElementById("descripcionmod2").value = peliculaEditar.descripcion;
+};
 
 window.botonModal = (e) => {
   e.preventDefault();
-   // Obtener los valores del formulario modal
-   const nombreMod2 = document.getElementById("nombremod2").value;
-   const categoriaMod2 = document.getElementById("categoriamod2").value;
-   const subidoPaginaMod2 = document.getElementById("subidoPaginamod2").value;
-   const descripcionMod2 = document.getElementById("descripcionmod2").value;
-}
+  // Obtener los valores del formulario modal
+  const nombreMod2 = document.getElementById("nombremod2").value;
+  const categoriaMod2 = document.getElementById("categoriamod2").value;
+  const subidoPaginaMod2 = document.getElementById("subidoPaginamod2").value;
+  const descripcionMod2 = document.getElementById("descripcionmod2").value;
+};
 
-
-const formulario2 = document.querySelector('#modal2');
+const formulario2 = document.querySelector("#modal2");
 formulario2.addEventListener("submit", botonModal);
 /*-------------------Fin boton editar---------------- */
 
 window.destacar = (id) => {
-  const peliculaEditar = arregloPeliculas.find((pelicula) => pelicula.id === id);
+  const peliculaEditar = arregloPeliculas.find(
+    (pelicula) => pelicula.id === id
+  );
+};
 
+const validarformulario = (texto, min, max) => {
+  if (texto.length >= min && texto.length <= max) {  
+    return true;
+  } else {
+    return false;
+  }
 };
