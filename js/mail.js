@@ -1,10 +1,9 @@
-
 Email.send({
     Host : "smtp.elasticemail.com",
-    Username : "brunonahuel87@gmail.com",
-    Password : "password",
+    Username : "pruba@gmail.com",
+    Password : "6529D1CCC19A798C1DA668DF4F1A3339D41E",
     To : 'brunonahuel87@yahoo.com',
-    From : "brunonahuel87@gmail.com",
+    From : "prueba@gmail.com",
     Subject : "This is the subject",
     Body : "And this is the body"
 }).then(

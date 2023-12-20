@@ -186,11 +186,20 @@ footer{
 }
 
 }
-
 #admin {
   background-color: #211747;
 }
+
+#bodyContacto{
+  background-color: #382281;
+}
+
 table , td , th , tr{
   border: solid 2px rgb(35, 50, 95);
   border-collapse: collapse;
 }
+
+#fondoFormulario{
+  border-radius: 1em;
+}
+
