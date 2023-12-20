@@ -188,3 +188,11 @@ footer{
 }
 
 }
+
+#admin {
+  background-color: #211747;
+}
+table , td , th , tr{
+  border: solid 2px rgb(35, 50, 95);
+  border-collapse: collapse;
+}
