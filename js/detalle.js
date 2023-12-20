@@ -10,7 +10,7 @@ const llenarDatos = ()=>{
     <div class="col-md-8 contenidoCard">
         <div class="card-body">
             <h3 class="card-title" id="tituloPeli">${pelicula.titulo}</h3>
-            <p class="card-text">${pelicula.descripcion}</p>
+            <p class="card-text">${pelicula.info}</p>
             <p class="card-text pieCard"><small class="text-body-secondary pieCard">Año de estreno: ${pelicula.año} | Genero: ${pelicula.genero}</small></p>
             <button type="button" class="btn btn-dark">Reproducir Pelicula</button>
         </div>
