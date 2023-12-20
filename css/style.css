@@ -8,11 +8,6 @@
     font-family: 'Montserrat', sans-serif;
     
 }
-@media screen and (min-width: 778px) {
-    nav img {
-        width: 45%;
-    }
-}
 
 /* principal*/
 aside{
@@ -94,20 +89,22 @@ img{
 @media( max-width: 1080px){
 
 }
-@media( max-width: 991px){
+@media (max-width: 991px){
     .catalogo--peliculas {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    .imagenNav{
+        width: 10%;
+        margin-top: 20px;
+    }
     .peliculas {
         display: flex;
         flex-wrap:nowrap;
         justify-content: space-between;
    
     }
-
     .pelis {
         width: 50%; /* O el ancho deseado para dispositivos pequeños */
         height: auto;
@@ -118,12 +115,12 @@ img{
 /* ... */
 
 @media (max-width: 774px) {
+
     .catalogo--peliculas {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .peliculas {
         display: flex;
         flex-wrap: wrap;
@@ -135,18 +132,19 @@ img{
         height: auto;
         margin-bottom: 10px; /* Espaciado entre imágenes */
     }
+    
 }
 
 .imagenNav{
-    width: 40%;
+    width: 15%;
+    margin-top: 20px;
 }
 
-nav img {
-    width: 100%;
-}
 
 nav {
-    position: fixed;
+    position: sticky;
+    width: 100%;
+    z-index: 1;
     
 }
 
@@ -157,11 +155,12 @@ body{
 }
 main {
     flex-grow: 1;
+    margin-top: 88px;
+
 }
 footer{
     background-color: #0f0826;
     height: 100%;
-    margin-top: auto;
     text-align: center;
 }
 .imgFooter{
@@ -172,17 +171,35 @@ footer{
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
-@media screen and (min-width: 778px){
-  
-    nav img{
+@media (max-width: 576px) {
+    .imagenNav {
+        width: 50%;
+    }
+    main {
+        margin-top: 70px; 
+}
+
+@media screen and (min-width: 778px) {
+    nav img {
         width: 45%;
     }
-    }
+}
+
+}
+#admin {
+  background-color: #211747;
+}
 
 #bodyContacto{
-    background-color: #382281;
+  background-color: #382281;
 }
+
+table , td , th , tr{
+  border: solid 2px rgb(35, 50, 95);
+  border-collapse: collapse;
+}
+
 #fondoFormulario{
-    border-radius: 1em;
+  border-radius: 1em;
 }
-    
+
